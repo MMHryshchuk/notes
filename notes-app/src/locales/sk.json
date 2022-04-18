@@ -1,0 +1,24 @@
+{
+  "about": {
+    "title": "O aplikácii",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "goToNotes": "Prejdite na Poznámky",
+    "about": "O aplikácii"
+  },
+  "notes": {
+    "add": "Pridať"
+  },
+  "note": {
+    "newNote": "Nová poznámka",
+    "note": "Poznámka",
+    "notes": "Poznámky",
+    "noteIsRequired": "Poznámka je povinná",
+    "notesWasCreated": "Poznámka bola vytvorená",
+    "notesWasUpdated": "Poznámka bola aktualizovaná",
+    "notesWasDeleted": "Poznámka bola vymazaná"
+  },
+  "common": {
+    "somethingWentWrong": "Niečo sa pokazilo",
+    "footer": "  © 2022 Author: Mykola Hryshchuk"
+  }
+}
