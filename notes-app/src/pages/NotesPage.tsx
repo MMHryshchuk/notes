@@ -24,28 +24,14 @@ export default function NotesPage() {
     const { t } = useTranslation();
 
     const [noteList, setNoteList] = useState<NoteType[]>([]);
-    const handleCreateNote = async (note: NoteType) => {
-        setNoteList((prevNoteList) => [note, ...prevNoteList]);
-    };
 
     const showErrorMessage = () =>
         enqueueSnackbar(t("common.somethingWentWrong"), {
             variant: "error",
         });
 
-    const handleDeleteNote = async (noteId: string) => {
-        try {
-            await noteService.deleteNote(noteId);
-            // Optimistic update
-            setNoteList((prevList) =>
-                prevList.filter((note) => note.noteId !== noteId)
-            );
-            enqueueSnackbar(t("note.notesWasDeleted"), {
-                variant: "success",
-            });
-        } catch {
-            showErrorMessage();
-        }
+    const handleCreateNote = async (note: NoteType) => {
+        setNoteList((prevNoteList) => [note, ...prevNoteList]);
     };
 
     const handleUpdateNote = async (noteId: string) => {
@@ -59,6 +45,21 @@ export default function NotesPage() {
                     note.noteId === noteId ? responseNote : note
                 )
             );
+        } catch {
+            showErrorMessage();
+        }
+    };
+
+    const handleDeleteNote = async (noteId: string) => {
+        try {
+            await noteService.deleteNote(noteId);
+            // Optimistic update
+            setNoteList((prevList) =>
+                prevList.filter((note) => note.noteId !== noteId)
+            );
+            enqueueSnackbar(t("note.notesWasDeleted"), {
+                variant: "success",
+            });
         } catch {
             showErrorMessage();
         }
