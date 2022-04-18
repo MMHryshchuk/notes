@@ -43,8 +43,6 @@ export default function NotesPage() {
             enqueueSnackbar(t("note.notesWasDeleted"), {
                 variant: "success",
             });
-            // Update notes via api
-            // loadNoteList();
         } catch {
             showErrorMessage();
         }
@@ -61,8 +59,6 @@ export default function NotesPage() {
                     note.noteId === noteId ? responseNote : note
                 )
             );
-            // Update notes via api
-            // loadNoteList();
         } catch {
             showErrorMessage();
         }
